@@ -1,0 +1,88 @@
+1. На локальном репозитории сделать ветки для:
+	- Postman
+	- Jmeter
+	- CheckLists
+	- Bag Reports
+	- SQL
+	- Charles
+	- Mobile testing
+
+	$ git brunch Postman  
+	$ git brunch Jmeter 
+	$ git brunch CheckLists 
+	$ git brunch Bag_Reports
+	$ git brunch SQL 
+	$ git brunch Charles 
+	$ git brunch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+	
+	$ git push -u origin Postman
+	$ git push -u origin Jmeter
+	$ git push -u origin CheckLists
+	$ git push -u origin Bag_Reports
+	$ git push -u origin SQL
+	$ git push -u origin Charles
+	$ git push -u origin Mobile_testing
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+	
+	$ git checkout Bag_Reports
+	$ touch Bag_Reports.txt
+	
+4. Запушить структуру багрепорта на внешний репозиторий
+	
+	git add .
+	git commit -m "1"
+	git push
+	Enumerating objects: 4, done.
+	Counting objects: 100% (4/4), done.	
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (3/3), done.
+	Writing objects: 100% (3/3), 456 bytes | 228.00 KiB/s, done.
+	Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+	remote: This repository moved. Please use the new location:
+	remote:   https://github.com/RomanovaValentina/It-s-my-works.git
+	To https://github.com/RomanovaValentina/Work.git
+	   f1763b9..6d585d1  Bag_Reports -> Bag_Reports
+	
+5. Вмержить ветку Bag Reports в Main
+
+	Valentina@VALENTINA MINGW64 ~/Desktop/gitHub/work (main)
+	$ git merge Bag_Reports
+	Updating f1763b9..6d585d1
+	Fast-forward
+	 bug_report_structure.txt | 9 +++++++++
+	 3 files changed, 9 insertions(+), 1 deletion(-)
+	 create mode 100644 bug_report_structure.txt
+
+6. Запушить main на внешний репозиторий.
+
+	git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+	vim check-list.txt
+8. Запушить структуру на внешний репозиторий
+	
+	git add .
+	git commit -m "1"
+	git push
+
+	Enumerating objects: 4, done.
+	Counting objects: 100% (4/4), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (3/3), done.
+	Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+	Total 3 (delta 1), reused 0 (delta 0), pack-reused 0	
+	remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+	remote: This repository moved. Please use the new location:
+	remote:   https://github.com/RomanovaValentina/It-s-my-works.git
+	To https://github.com/RomanovaValentina/Work.git
+	   f1763b9..06f317c  CheckLists -> CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в mainls
+	pull requests -> new pull requests -> create pull requests
+	
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+	git pull

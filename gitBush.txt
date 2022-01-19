@@ -1,0 +1,168 @@
+1) Посмотреть где я
+$ pwd
+
+2) Создать папку
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение
+$ mkdir foto
+
+3) Зайти в папку
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение
+$ cd foto
+
+4) Создать 3 папки
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ mkdir z1 z2 z3
+
+5) Зайти в любоую папку
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ cd z2
+
+6) Создать 5 файлов (3 txt, 2 json)
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ touch price1.txt price2.txt price3.txt 1.json 2.json
+
+7) Создать 3 папки
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ mkdir march april june
+
+8. Вывести список содержимого папки
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ ls -la
+total 8
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 11:11 ./
+drwxr-xr-x 1 Valentina 197121 0 Jan  6 11:57 ../
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 11:10 1.json
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 11:10 2.json
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 11:11 april/
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 11:11 june/
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 11:11 march/
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 11:10 price1.txt
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 11:10 price2.txt
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 11:10 price3.txt
+
+
+9) + Открыть любой txt файл
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ vim price1.txt
+
+10) + написать туда что-нибудь, любой текст
+11) + сохранить и выйти.
+
+12) Выйти из папки на уровень выше
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ mv z1/1.json z2/1.json
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ mv z1/2.json z2/2.json
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ cp z1/price1.txt z2/price1.txt
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ cp z1/price2.txt z2/price2.txt
+
+15) Найти файл по имени
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ find . -iname price1.txt
+./z2/price1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ tail -f price1.txt
+hi
+my name is Valentina
+I from Sochi
+
+
+17) вывести несколько первых строк из текстового файла
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ head price1.txt
+hi
+my name is Valentina
+I from Sochi
+
+
+18) вывести несколько последних строк из текстоводуыыго файла
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ tail price1.txt
+hi
+my name is Valentina
+I from Sochidate
+less
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$  less z2/price1.txt
+
+hi
+my name is Valentina
+I from Sochi
+
+
+price1.txt (END)
+
+20) вывести дату и время
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ date
+Sat Jan  8 13:07:27 RTZ 2022
+
+
+Задание *1
+Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+vim
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ curl "http://162.55.220.72:5005/terminal-hw-request"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0   1652      0 --:--:-- --:--:-- --:--:--  1669{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto/z1
+$ curl "http://162.55.220.72:5005/get_method?name=Valentina&age=25"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    19  100    19    0     0    142      0 --:--:-- --:--:-- --:--:--   143["Valentina","25"]
+
+Задание *2
+Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ vim script.sh
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ chmod +x script.sh
+
+Valentina@VALENTINA MINGW64 ~/Desktop/обучение/foto
+$ ./script.sh
+total 4
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 12:53 .
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 12:53 ..
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 12:53 11.txt
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 12:53 12.txt
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 12:53 13.txt
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 12:53 14.json
+-rw-r--r-- 1 Valentina 197121 0 Jan  8 12:53 15.json
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 12:53 m1
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 12:53 m2
+drwxr-xr-x 1 Valentina 197121 0 Jan  8 12:53 m3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
