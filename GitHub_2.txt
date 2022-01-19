@@ -55,7 +55,7 @@
 	 3 files changed, 9 insertions(+), 1 deletion(-)
 	 create mode 100644 bug_report_structure.txt
 
-6. Запушить main на внешний репозиторий.
+6. Запушить main на внешний репозиторий
 
 	git push
 
