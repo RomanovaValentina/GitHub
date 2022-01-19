@@ -15,7 +15,7 @@ JSON https://github.com/RomanovaValentina/JSON
 	$ git commit -m "add json file to repository"
 
  9. Отправить файл на внешний GitHub репозиторий.
-	git push17
+	git push
  10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
 	$ vim new.json
 
